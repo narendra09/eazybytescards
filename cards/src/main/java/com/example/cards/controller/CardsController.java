@@ -25,7 +25,7 @@ public class CardsController {
 	@GetMapping("/myCard/{customerId}")
 	public ResponseEntity<List<Cards>> getAccountDetails(@PathVariable int customerId) {
 
-		log.info("inside cards controller");
+		log.info("inside cards controller merge conflict");
 		List<Cards> loans = cardsService.findByCustomerId(customerId);
 		log.info("end of cards controller");
 		return  new ResponseEntity<List<Cards>>(loans, HttpStatus.OK) ;
